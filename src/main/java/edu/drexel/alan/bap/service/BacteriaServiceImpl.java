@@ -11,6 +11,9 @@ import java.util.Optional;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import edu.drexel.alan.bap.model.Bacteria;
@@ -81,7 +84,9 @@ public class BacteriaServiceImpl implements BacteriaService {
 	
 	@Override
 	public List<Bacteria> findAll() throws ServiceException {
-		return bacteriaRepo.findAll();
+		//return bacteriaRepo.findAll();
+		List<Bacteria> list = bacteriaRepo.findAll();
+		return list.subList(0, 10);
 	}
 	
 	@Override

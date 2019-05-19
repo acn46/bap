@@ -71,7 +71,7 @@
 				<version>1.6</version>
 				<configuration>
 					<installDirectory>target</installDirectory>
-					<workingDirectory>src/main/webapp</workingDirectory>
+					<!--  <workingDirectory>src/main/webapp</workingDirectory>  -->
 				</configuration>
 				<executions>
 					<execution>
@@ -98,9 +98,6 @@
 						<goals>
 							<goal>webpack</goal>
 						</goals>
-						<configuration>
-							<arguments>install</arguments>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
